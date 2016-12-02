@@ -1,0 +1,348 @@
+<html>
+<head>
+    	<script type="text/javascript">
+	var count = 0;
+	var game1="";
+	var game2="";
+	var game3="";
+	var game4="";
+	var game5="";
+	function execGame(dummyGame) {
+		if (dummyGame=="diamonds") {
+			var temp1=document.getElementById("p1score").innerHTML;
+			var temp2=document.getElementById("p2score").innerHTML;
+			var temp3=document.getElementById("p3score").innerHTML;
+			var temp4=document.getElementById("p4score").innerHTML;
+			var p1diamonds=prompt("How many diamonds did " + (document.getElementById("p1").innerHTML) + " get?");
+			var p2diamonds=prompt("How many diamonds did " + (document.getElementById("p2").innerHTML) + " get?");
+			var p3diamonds=prompt("How many diamonds did " + (document.getElementById("p3").innerHTML) + " get?");
+			var p4diamonds=prompt("How many diamonds did " + (document.getElementById("p4").innerHTML) + " get?");
+			while( ((1*p1diamonds)+(1*p2diamonds)+(1*p3diamonds)+(1*p4diamonds))!=13 ) {
+				p1diamonds=prompt("How many diamonds did " + (document.getElementById("p1").innerHTML) + " get?");
+				p2diamonds=prompt("How many diamonds did " + (document.getElementById("p2").innerHTML) + " get?");
+				p3diamonds=prompt("How many diamonds did " + (document.getElementById("p3").innerHTML) + " get?");
+				p4diamonds=prompt("How many diamonds did " + (document.getElementById("p4").innerHTML) + " get?");	
+			}
+			(document.getElementById("p1score").innerHTML)=temp1-(10*p1diamonds);
+			(document.getElementById("p2score").innerHTML)=temp2-(10*p2diamonds);
+			(document.getElementById("p3score").innerHTML)=temp3-(10*p3diamonds);
+			(document.getElementById("p4score").innerHTML)=temp4-(10*p4diamonds);
+		}
+		if (dummyGame=="tricks") {
+			var temp5=document.getElementById("p1score").innerHTML;
+			var temp6=document.getElementById("p2score").innerHTML;
+			var temp7=document.getElementById("p3score").innerHTML;
+			var temp8=document.getElementById("p4score").innerHTML;
+			var p1tricks=prompt("How many tricks did " + (document.getElementById("p1").innerHTML) + " get?");
+			var p2tricks=prompt("How many tricks did " + (document.getElementById("p2").innerHTML) + " get?");
+			var p3tricks=prompt("How many tricks did " + (document.getElementById("p3").innerHTML) + " get?");
+			var p4tricks=prompt("How many tricks did " + (document.getElementById("p4").innerHTML) + " get?");
+			while( ((1*p1tricks)+(1*p2tricks)+(1*p3tricks)+(1*p4tricks))!=13 ) {
+				p1tricks=prompt("How many tricks did " + (document.getElementById("p1").innerHTML) + " get?");
+				p2tricks=prompt("How many tricks did " + (document.getElementById("p2").innerHTML) + " get?");
+				p3tricks=prompt("How many tricks did " + (document.getElementById("p3").innerHTML) + " get?");
+				p4tricks=prompt("How many tricks did " + (document.getElementById("p4").innerHTML) + " get?");	
+			}
+			(document.getElementById("p1score").innerHTML)=temp5-(15*p1tricks);
+			(document.getElementById("p2score").innerHTML)=temp6-(15*p2tricks);
+			(document.getElementById("p3score").innerHTML)=temp7-(15*p3tricks);
+			(document.getElementById("p4score").innerHTML)=temp8-(15*p4tricks);
+		}
+		if (dummyGame=="queens") {
+			var temp9=document.getElementById("p1score").innerHTML;
+			var temp10=document.getElementById("p2score").innerHTML;
+			var temp11=document.getElementById("p3score").innerHTML;
+			var temp12=document.getElementById("p4score").innerHTML;
+			var p1queens=prompt("How many queens did " + (document.getElementById("p1").innerHTML) + " get?");
+			var p2queens=prompt("How many queens did " + (document.getElementById("p2").innerHTML) + " get?");
+			var p3queens=prompt("How many queens did " + (document.getElementById("p3").innerHTML) + " get?");
+			var p4queens=prompt("How many queens did " + (document.getElementById("p4").innerHTML) + " get?");
+			while( ((1*p1queens)+(1*p2queens)+(1*p3queens)+(1*p4queens))!=4 ) {
+				p1queens=prompt("How many queens did " + (document.getElementById("p1").innerHTML) + " get?");
+				p2queens=prompt("How many queens did " + (document.getElementById("p2").innerHTML) + " get?");
+				p3queens=prompt("How many queens did " + (document.getElementById("p3").innerHTML) + " get?");
+				p4queens=prompt("How many queens did " + (document.getElementById("p4").innerHTML) + " get?");	
+			}
+			(document.getElementById("p1score").innerHTML)=temp9-(25*p1queens);
+			(document.getElementById("p2score").innerHTML)=temp10-(25*p2queens);
+			(document.getElementById("p3score").innerHTML)=temp11-(25*p3queens);
+			(document.getElementById("p4score").innerHTML)=temp12-(25*p4queens);
+		}
+		if (dummyGame=="king of hearts") {
+	                var kingHolder=prompt("Who got the king of hearts?");
+			var temp13;
+                	while ( (kingHolder!=(document.getElementById("p1").innerHTML)) && (kingHolder!=(document.getElementById("p2").innerHTML)) && (kingHolder!=(document.getElementById("p3").innerHTML)) && (kingHolder!=(document.getElementById("p4").innerHTML))) {
+	                	kingHolder=prompt("Who got the king of hearts?");
+			}                       
+                	if (kingHolder==(document.getElementById("p1").innerHTML)) {
+				temp13=document.getElementById("p1score").innerHTML;
+				(document.getElementById("p1score").innerHTML)=temp13-(75);
+			}
+			if (kingHolder==(document.getElementById("p2").innerHTML)) {
+				temp13=document.getElementById("p2score").innerHTML;
+				(document.getElementById("p2score").innerHTML)=temp13-(75);
+			}
+			if (kingHolder==(document.getElementById("p3").innerHTML)) {
+				temp13=document.getElementById("p3score").innerHTML;
+				(document.getElementById("p3score").innerHTML)=temp13-(75);
+			}
+			if (kingHolder==(document.getElementById("p4").innerHTML)) {
+				temp13=document.getElementById("p4score").innerHTML;
+				(document.getElementById("p4score").innerHTML)=temp13-(75);
+			}
+		}
+		if (dummyGame=="jacks") {
+        		var jFirst = prompt("Who finished first?");
+        		while (jFirst!=(document.getElementById("p1").innerHTML) && jFirst!=(document.getElementById("p2").innerHTML) && jFirst!=(document.getElementById("p3").innerHTML) && jFirst!=(document.getElementById("p4").innerHTML)){
+        			jFirst = prompt("Who finished first?");
+			}
+        		var jSecond = prompt("Who finished second?");
+        		while (jSecond!=(document.getElementById("p1").innerHTML) && jSecond!=(document.getElementById("p2").innerHTML) && jSecond!=(document.getElementById("p3").innerHTML) && jSecond!=(document.getElementById("p4").innerHTML)){
+        			jSecond = prompt("Who finished second?");
+			}
+        		var jThird = prompt("Who finished third?");
+        		while (jThird!=(document.getElementById("p1").innerHTML) && jThird!=(document.getElementById("p2").innerHTML) && jThird!=(document.getElementById("p3").innerHTML) && jThird!=(document.getElementById("p4").innerHTML)){
+        			jThird = prompt('Who finished third?');
+			}		
+        		var jFourth = prompt("Who finished fourth?");
+        		while (jFourth!=(document.getElementById("p1").innerHTML) && jFourth!=(document.getElementById("p2").innerHTML) && jFourth!=(document.getElementById("p3").innerHTML) && jFourth!=(document.getElementById("p4").innerHTML)){
+        			jFourth = prompt("Who finished fourth?");
+        		}
+			while ((jFirst!=(document.getElementById("p1").innerHTML) && jSecond!=(document.getElementById("p1").innerHTML) && jThird!=(document.getElementById("p1").innerHTML) && jFourth!=(document.getElementById("p1").innerHTML)) || (jFirst!=(document.getElementById("p2").innerHTML) && jSecond!=(document.getElementById("p2").innerHTML) && jThird!=(document.getElementById("p2").innerHTML) && jFourth!=(document.getElementById("p2").innerHTML)) || (jFirst!=(document.getElementById("p3").innerHTML) && jSecond!=(document.getElementById("p3").innerHTML) && jThird!=(document.getElementById("p3").innerHTML) && jFourth!=(document.getElementById("p3").innerHTML)) || (jFirst!=(document.getElementById("p4").innerHTML) && jSecond!=(document.getElementById("p4").innerHTML) && jThird!=(document.getElementById("p4").innerHTML) && jFourth!=(document.getElementById("p4").innerHTML))) {
+				jFirst = prompt('Who finished first?');
+                        	while (jFirst!=(document.getElementById("p1").innerHTML) && jFirst!=(document.getElementById("p2").innerHTML) && jFirst!=(document.getElementById("p3").innerHTML) && jFirst!=(document.getElementById("p4").innerHTML)){
+                                	jFirst = prompt('Who finished first?');
+                        	}
+                        	jSecond = prompt('Who finished second?');
+                        	while (jSecond!=(document.getElementById("p1").innerHTML) && jSecond!=(document.getElementById("p2").innerHTML) && jSecond!=(document.getElementById("p3").innerHTML) && jSecond!=(document.getElementById("p4").innerHTML)){
+                        	        jSecond = prompt('Who finished second?');
+                        	}
+                        	jThird = prompt('Who finished third?');
+                        	while (jThird!=(document.getElementById("p1").innerHTML) && jThird!=(document.getElementById("p2").innerHTML) && jThird!=(document.getElementById("p3").innerHTML) && jThird!=(document.getElementById("p4").innerHTML)){
+                        	        jThird = prompt('Who finished third?');
+                        	}
+                        	jFourth = prompt('Who finished fourth?');
+                        	while (jFourth!=(document.getElementById("p1").innerHTML) && jFourth!=(document.getElementById("p2").innerHTML) && jFourth!=(document.getElementById("p3").innerHTML) && jFourth!=(document.getElementById("p4").innerHTML)){
+                        	        jFourth = prompt('Who finished fourth?');
+                        	}
+			}
+			if (jFirst==(document.getElementById("p1").innerHTML)) {
+				var temp14 = (document.getElementById("p1score").innerHTML);
+				(document.getElementById("p1score").innerHTML)=(1*temp14)+(1*200);
+			}
+			else if (jFirst==(document.getElementById("p2").innerHTML)) {
+				var temp15 = (document.getElementById("p2score").innerHTML);
+				(document.getElementById("p2score").innerHTML)=(1*temp15)+(1*200);
+			}
+			else if (jFirst==(document.getElementById("p3").innerHTML)) {
+				var temp16 = (document.getElementById("p3score").innerHTML);
+				(document.getElementById("p3score").innerHTML)=(1*temp16)+(1*200);
+			}
+			else if (jFirst==(document.getElementById("p4").innerHTML)) {
+				var temp17 = (document.getElementById("p4score").innerHTML);
+				(document.getElementById("p4score").innerHTML)=(1*temp17)+(1*200);
+			}
+			if (jSecond==(document.getElementById("p1").innerHTML)) {
+				var temp18 = (document.getElementById("p1score").innerHTML);
+				(document.getElementById("p1score").innerHTML)=(1*temp18)+(1*150);
+			}
+			else if (jSecond==(document.getElementById("p2").innerHTML)) {
+				var temp19 = (document.getElementById("p2score").innerHTML);
+				(document.getElementById("p2score").innerHTML)=(1*temp19)+(1*150);
+			}
+			else if (jSecond==(document.getElementById("p3").innerHTML)) {
+				var temp20 = document.getElementById("p3score").innerHTML;
+				(document.getElementById("p3score").innerHTML)=(1*temp20)+(1*150);
+			}
+			else if (jSecond==(document.getElementById("p4").innerHTML)) {
+				var temp21 = (document.getElementById("p4score").innerHTML);
+				(document.getElementById("p4score").innerHTML)=(1*temp21)+(1*150);
+			}
+			if (jThird==(document.getElementById("p1").innerHTML)) {
+				var temp22 = (document.getElementById("p1score").innerHTML);
+				(document.getElementById("p1score").innerHTML)=(1*temp22)+(1*100);
+			}
+			else if (jThird==(document.getElementById("p2").innerHTML)) {
+				var temp23 = (document.getElementById("p2score").innerHTML);
+				(document.getElementById("p2score").innerHTML)=(1*temp23)+(1*100);
+			}
+			else if (jThird==(document.getElementById("p3").innerHTML)) {
+				var temp24 = (document.getElementById("p3score").innerHTML);
+				(document.getElementById("p3score").innerHTML)=(1*temp24)+(1*100);
+			}
+			else if (jThird==(document.getElementById("p4").innerHTML)) {
+				var temp25 = (document.getElementById("p4score").innerHTML);
+				(document.getElementById("p4score").innerHTML)=(1*temp25)+(1*100);
+			}
+			if (jFourth==(document.getElementById("p1").innerHTML)) {
+				var temp26 = (document.getElementById("p1score").innerHTML);
+				(document.getElementById("p1score").innerHTML)=(1*temp26)+(1*50);
+			}
+			else if (jFourth==(document.getElementById("p2").innerHTML)) {
+				var temp27 = (document.getElementById("p2score").innerHTML);
+				(document.getElementById("p2score").innerHTML)=(1*temp27)+(1*50);
+			}
+			else if (jFourth==(document.getElementById("p3").innerHTML)) {
+				var temp28 = (document.getElementById("p3score").innerHTML);
+				(document.getElementById("p3score").innerHTML)=(1*temp28)+(1*50);
+			}
+			else if (jFourth==(document.getElementById("p4").innerHTML)) {
+				var temp29 = (document.getElementById("p4score").innerHTML);
+				(document.getElementById("p4score").innerHTML)=(1*temp29)+(1*50);
+			}
+		}
+	}
+	function playHand()
+	{
+		if ((count==0) || (count==5) || (count==10) || (count==15)) {
+			game1="";
+			game2="";
+			game3="";
+			game4="";
+			game5="";
+		} 
+		if (((count>=0) && (count<5)) || ((count>=5) && (count<10)) || ((count>=10) && (count<15)) || ((count>=15) && (count<20))) {
+			if ((count%5)==0) {
+				game1=prompt('Which game is first?');	
+				while ((game1!="diamonds") && (game1!="tricks") && (game1!="king of hearts") && (game1!="queens") && (game1!="jacks")) {
+					game1=prompt('Which game is first?');	
+				}
+				execGame(game1);
+			}
+			if ((count%5)==1) {
+				game2=prompt('Which game is second?');	
+				while (((game2!="diamonds") && (game2!="tricks") && (game2!="king of hearts") && (game2!="queens") && (game2!="jacks")) || (game2==game1)) {
+					game2=prompt('Which game is second?');	
+				}
+				execGame(game2);
+			}
+			if ((count%5)==2) {
+				game3=prompt('Which game is third?');	
+				while (((game3!="diamonds") && (game3!="tricks") && (game3!="king of hearts") && (game3!="queens") && (game3!="jacks")) || (game3==game2) || (game3==game1)) {
+					game3=prompt('Which game is third?');	
+				}
+				execGame(game3);
+			}
+			if ((count%5)==3) {
+				game4=prompt('Which game is fourth?');	
+				while (((game4!="diamonds") && (game4!="tricks") && (game4!="king of hearts") && (game4!="queens") && (game4!="jacks")) || (game4==game3) || (game4==game2) || (game4==game1)) {
+					game4=prompt('Which game is fourth?');	
+				}
+				execGame(game4);
+			}
+			if ((count%5)==4) {
+				game5=prompt('Which game is fifth?');	
+				while (((game5!="diamonds") && (game5!="tricks") && (game5!="king of hearts") && (game5!="queens") && (game5!="jacks")) || (game5==game4) || (game5==game3) || (game5==game2) || (game5==game1)) {
+					game5=prompt('Which game is fifth?');	
+				}
+				execGame(game5);
+			}
+			count++;
+			kingdomChanger();
+		}
+		if (count==20) {
+			game1="";
+			game2="";
+			game3="";
+			game4="";
+			game5="";
+/*			var winner=(document.getElementById("p1").innerHTML);
+			var winnerscore=(document.getElementById("p1score").innerHTML);
+			if ((document.getElementById("p2score"),innerHTML)>winnerscore) {
+			    	winner=(document.getElementById("p2").innerHTML);
+			    	winnerscore=(document.getElementById("p2score").innerHTML);
+			}
+			else if (p2score==winnerscore) {
+    				winner=winner+' and '+(document.getElementById("p2").innerHTML);
+			}
+			if ((document.getElementById("p3score").innerHTML)>winnerscore) {
+    				winner=(document.getElementById("p3").innerHTML);
+    				winnerscore=(document.getElementById("p3score").innerHTML;
+			}
+			else if ((document.getElementById("p3score"),innerHTML)==winnerscore) {
+    				winner=winner+' and '+(document.getElementById("p3").innerHTML);
+			}
+			if ((document.getElementById("p4score").innerHTML)>winnerscore) {
+    				winner=(document.getElementById("p4").innerHTML);
+    				winnerscore=(document.getElementById("p4score").innerHTML);
+			}
+			else if ((document.getElementById("p4score").innerHTML)==winnerscore) {
+    				winner=winner+' and '+(document.getElementById("p4").innerHTML);
+			}
+			document.getElementById("kingdom").innerHTML = (winner+" won");
+*/		}
+	}
+	function kingdomChanger()
+	{
+		if ((count>=0) && (count<5)) {
+			document.getElementById("kingdom").innerHTML = ((document.getElementById("p1").innerHTML)+"'s "+"Kingdom");
+		}
+		if ((count>=5) && (count<10)) {
+			document.getElementById("kingdom").innerHTML = ((document.getElementById("p2").innerHTML)+"'s "+"Kingdom");
+		}
+		if ((count>=10) && (count<15)) {
+			document.getElementById("kingdom").innerHTML = ((document.getElementById("p3").innerHTML)+"'s "+"Kingdom");
+		}
+		if ((count>=15) && (count<20)) {
+			document.getElementById("kingdom").innerHTML = ((document.getElementById("p4").innerHTML)+"'s "+"Kingdom");
+		}
+	}
+        function changeP1()
+        {
+		var p1Name = prompt('Please enter the name of Player 1');
+  		localStorage.setItem('name', p1Name);
+		document.getElementById("p1").innerHTML = p1Name;
+		kingdomChanger();
+        }
+        function changeP2()
+        {
+		var p2Name = prompt('Please enter the name of Player 2');
+  		localStorage.setItem('name', p2Name);
+		document.getElementById("p2").innerHTML = p2Name;
+		kingdomChanger();
+        }
+        function changeP3()
+        {
+		var p3Name = prompt('Please enter the name of Player 3');
+  		localStorage.setItem('name', p3Name);
+		document.getElementById("p3").innerHTML = p3Name;
+		kingdomChanger();
+        }
+        function changeP4()
+        {
+		var p4Name = prompt('Please enter the name of Player 4');
+  		localStorage.setItem('name', p4Name);
+		document.getElementById("p4").innerHTML = p4Name;
+		kingdomChanger();
+        }
+	</script>
+</head>
+<body>
+	<h1>Tricks Scorer</h1>
+	<h1 ID="kingdom" style="display:blocks">First Kingdom</h1>
+	<input type="button" onclick="playHand()" value="Next Hand" />
+	<br>
+	<br>
+	<p ID="p1" style="display:inline">Player 1</p>
+	<p style="display:inline">: </p>
+	<p ID="p1score" style="display:inline">0</p>
+	<br>
+	<p ID="p2" style="display:inline">Player 2</p>
+	<p style="display:inline">: </p>
+	<p ID="p2score" style="display:inline">0</p>
+	<br>
+	<p ID="p3" style="display:inline">Player 3</p>
+	<p style="display:inline">: </p>
+	<p ID="p3score" style="display:inline">0</p>
+	<br>
+	<p ID="p4" style="display:inline">Player 4</p>
+	<p style="display:inline">: </p>
+	<p ID="p4score" style="display:inline">0</p>
+	<br>
+	<br>
+	<input type="button" onclick="changeP1()" value="Change Player 1" />
+	<input type="button" onclick="changeP2()" value="Change Player 2" />
+    	<input type="button" onclick="changeP3()" value="Change Player 3" />
+    	<input type="button" onclick="changeP4()" value="Change Player 4" />
+</body>
+</html>
